@@ -1,0 +1,14 @@
+{
+  "id": "/",
+  "name": "Gestion Budget DT",
+  "short_name": "Budget DT",
+  "description": "Gestion personnelle du budget en dinars tunisiens",
+  "lang": "fr-TN",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#123b35",
+  "background_color": "#f5f7f6",
+  "icons": [{"src":"/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}
