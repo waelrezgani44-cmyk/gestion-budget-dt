@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { Wallet, TrendingUp, TrendingDown, Receipt, Plus, Trash2, Download, Upload, RefreshCw, LayoutDashboard, ArrowLeftRight, CreditCard, Search, Pencil, X, CalendarDays, ShieldCheck, WifiOff } from 'lucide-react';
 import './style.css';
 
-const API = '/api';
+const API = 'https://gestion-budget-dt.onrender.com/api';
 const cats = ['Pharmacie', 'Épicerie', 'Transport', 'Factures', 'Logement', 'Santé', 'Salaire', 'Éducation', 'Loisirs', 'Autres'];
 const money = n => new Intl.NumberFormat('fr-FR', { minimumFractionDigits: 3, maximumFractionDigits: 3 }).format(Number(n || 0)) + ' DT';
 const today = () => { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`; };
