@@ -73,9 +73,15 @@ class CreditPayment(Base):
 
 Base.metadata.create_all(bind=engine)
 app = FastAPI(title="Gestion Budget DT", version="2.0.0", description="Suivi des revenus, dépenses et achats à crédit en dinars tunisiens.")
-origins = [x.strip() for x in os.getenv("CORS_ORIGINS", "http://localhost:5173,http://localhost:8080").split(",") if x.strip()]
-app.add_middleware(CORSMiddleware, allow_origins=origins, allow_credentials=False, allow_methods=["GET", "POST", "PUT", "DELETE"], allow_headers=["Content-Type"])
+origins = ["https://gestion-budget-dt-1.onrender.com"]
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=False,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 def get_db():
     db = SessionLocal()
     try:
